@@ -21,9 +21,6 @@ load(fullfile(config.classification));
 %% Save output
 save(fullfile('wmc','classification.mat'),'classification','fg_classified');
 
-%% create tracts for json structures for visualization
-tracts = fg2Array(fg_classified);
-
 mkdir(fullfile('wmc','tracts'));
 
 % Make colors for the tracts
