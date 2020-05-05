@@ -3,9 +3,11 @@ function [] = main()
 if ~isdeployed
     disp('loading path')
     %for IU HPC
+    addpath(genpath('/N/u/brlife/git/vistasoft'))
     addpath(genpath('/N/u/brlife/git/jsonlab'))
 
     %for old VM
+    addpath(genpath('/usr/local/vistasoft'))
     addpath(genpath('/usr/local/jsonlab'))
 end
 
@@ -22,6 +24,9 @@ load(fullfile(config.classification));
 save(fullfile('wmc','classification.mat'),'classification','fg_classified');
 
 mkdir(fullfile('wmc','tracts'));
+
+% Create structure to generate colors for each tract
+tracts = fg2Array(fg_classified);
 
 % Make colors for the tracts
 %cm = parula(length(tracts));
