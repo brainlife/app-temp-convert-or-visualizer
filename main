@@ -5,3 +5,11 @@
 mkdir -p wmc
 
 time singularity exec -e docker://brainlife/mcr:neurodebian1604-r2017a ./compiled/main
+
+if [ ! -f ./wmc/tracts/tracts.json ]; then
+	echo "failed"
+	exit 1
+else
+	echo "complete"
+	exit 0
+fi
