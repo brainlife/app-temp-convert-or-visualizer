@@ -3,14 +3,14 @@ function [] = main()
 if ~isdeployed
     disp('loading path')
     %for IU HPC
-    addpath(genpath('/N/u/brlife/wma_tools/Utils/External/'))
+    addpath(genpath('/N/u/brlife/wma_tools'))
     addpath(genpath('/N/u/brlife/git/vistasoft'))
     addpath(genpath('/N/u/brlife/git/jsonlab'))
 
     %for old VM
     addpath(genpath('/usr/local/vistasoft'))
     addpath(genpath('/usr/local/jsonlab'))
-    addpath(genpath('/usr/local/wma_tools/Utils/External/'))
+    addpath(genpath('/usr/local/wma_tools'))
 end
 
 % Set top directory
